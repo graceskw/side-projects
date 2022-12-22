@@ -43,7 +43,9 @@ public class GUI{
 
     public class NoButton implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            no.setLocation((int) (Math.random()*frame.getWidth()), (int) (Math.random()*frame.getHeight()));
+            int w = (int) (Math.random()*frame.getWidth());
+            int h = (int) (Math.random()*frame.getHeight());
+            no.setLocation(w, h);
         }
     }
 

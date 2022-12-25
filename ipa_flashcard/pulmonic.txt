@@ -1,0 +1,186 @@
+U+0070  p
+U+0062  b
+Blank
+U+006D  m
+Blank
+U+0299  ʙ
+Blank
+Blank
+U+0278  ɸ
+U+03B2  β
+Shaded
+Shaded
+Blank
+Blank
+Shaded
+Shaded
+
+Blank
+Blank
+Blank
+U+0271  ɱ
+Blank
+Blank
+Blank
+U+2C71  ⱱ
+U+0066  f
+U+0076  v
+Shaded
+Shaded
+Blank
+U+028B  ʋ
+Shaded
+Shaded
+
+U+0074  t
+U+0064  d
+Blank
+U+006E  n
+Blank
+U+0072  r
+Blank
+U+027E  ɾ
+U+03B8  θ
+U+00F0  ð
+U+026C  ɬ
+U+026E  ɮ
+Blank
+U+0279  ɹ
+Blank
+U+006C  l
+
+U+0074  t
+U+0064  d
+Blank
+U+006E  n
+Blank
+U+0072  r
+Blank
+U+027E  ɾ
+U+0073  s
+U+007A  z
+U+026C  ɬ
+U+026E  ɮ
+Blank
+U+0279  ɹ
+Blank
+U+006C  l
+
+U+0074  t
+U+0064  d
+Blank
+U+006E  n
+Blank
+U+0072  r
+Blank
+U+027E  ɾ
+U+0283  ʃ
+U+0292  ʒ
+U+026C  ɬ
+U+026E  ɮ
+Blank
+U+0279  ɹ
+Blank
+U+006C  l
+
+U+0288  ʈ
+U+0256  ɖ
+Blank
+U+0273  ɳ	
+Blank
+Blank
+Blank
+U+027D  ɽ
+U+0282  ʂ
+U+0290  ʐ
+Blank
+Blank
+Blank
+U+027B  ɻ
+Blank
+U+026D  ɭ
+
+U+0063  c
+U+025F  ɟ
+Blank
+U+0272  ɲ
+Blank
+Blank
+Blank
+Blank
+U+00E7  ç
+U+029D	ʝ
+Blank
+Blank
+Blank
+U+006A  j
+Blank
+U+028E  ʎ
+
+U+006B  k
+U+0261  ɡ
+Blank
+U+014B  ŋ
+Shaded
+Shaded
+Shaded
+Shaded
+U+0078  x
+U+0263  ɣ
+Blank
+Blank
+Blank
+U+0270  ɰ
+Blank
+U+029F  ʟ
+
+U+0071  q
+U+0262  ɢ
+Blank
+U+0274  ɴ
+Blank
+U+0280  ʀ
+Blank
+Blank
+U+03C7  χ
+U+0281  ʁ
+Blank
+Blank
+Blank
+Blank
+Blank
+Blank
+
+Blank
+Shaded
+Shaded
+Shaded
+Blank
+Blank
+Blank
+Blank
+U+0127  ħ
+U+0295  ʕ
+Shaded
+Shaded
+Blank
+Blank
+Shaded
+Shaded
+
+U+02A1  ʡ
+Shaded
+Shaded
+Shaded
+Shaded
+Shaded
+Shaded
+Shaded
+U+0068  h
+U+0266  ɦ
+Shaded
+Shaded
+Shaded
+Shaded
+Shaded
+Shaded

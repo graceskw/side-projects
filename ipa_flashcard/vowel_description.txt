@@ -1,0 +1,28 @@
+High Front Tense Unrounded
+High Front Tense Rounded
+High Front lax Unrounded
+High Front lax Rounded
+Mid Front Tense Unrounded
+Mid Front Tense Rounded
+Mid Front lax Unrounded
+Mid Front lax Rounded
+// Low Front N/A Unrounded (ae)
+// Low Front N/A Unrounded (a)
+// Low Front N/A Rounded (OE)
+High Central Tense Unrounded
+High Central Tense Rounded
+Mid Central Tense Unrounded
+Mid Central Tense Rounded
+Mid Central lax Unrounded
+Mid Central lax Rounded
+// Low Central N/A Unrounded
+High Back Tense Unrounded
+High Back Tense Rounded
+High Back lax Rounded
+Mid Back Tense Unrounded
+Mid Back Tense Rounded
+Mid Back lax Unrounded
+Mid Back lax Rounded
+// Low Back N/A Unrounded
+// Low Back N/A Rounded
+(shuwa)

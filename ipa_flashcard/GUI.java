@@ -1,14 +1,24 @@
 import java.awt.*;
-
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.*;
+// import javax.swing.JFrame;
+// import javax.swing.JPanel;
+// import javax.swing.JLabel;
+// import javax.swing.JOptionPane;
 
 public class GUI {
+    JOptionPane mode;
+    JOptionPane symbolSet;
+
     JFrame frame;
     JPanel flashcard;
     JPanel options;
     
-    public void GUI{
+    public GUI(){
+        // to choose the mode
+        this.mode = new JOptionPane();
+        // to choose the symbol set
+        this.symbolSet = new JOptionPane();
+
         this.frame = new JFrame("IPA Flashcard");
         // this.flashcard = new JPanel();
         // this.options = new JPanel();

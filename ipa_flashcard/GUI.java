@@ -9,14 +9,19 @@ public class GUI {
     int mode;
     int symbolSet;
 
-    JFrame frame;
-    JPanel flashcard;
-    JPanel options;
+    private JFrame frame;
+    private JPanel flashcardPanel;
+    private JPanel optionPanel;
+    private JPanel buttonPanel;
 
-    JMenuBar menuBar;
-    JMenu menu;
-    JMenuItem restart;
-    JMenuItem quit;
+    private JButton confirmButton;
+    private JButton skipButton;
+    private JButton cancelButton;
+
+    private JMenuBar menuBar;
+    private JMenu menu;
+    private JMenuItem restart;
+    private JMenuItem quit;
     
     public GUI(){
         // to choose the mode
@@ -28,8 +33,21 @@ public class GUI {
         String[] symbolSetOptions = new String[]{"Vowels", "Pulmonic consonants", "Vowels and Consonants"};
         this.symbolSet = JOptionPane.showOptionDialog(null, "Please choose desired IPA symbol set:", "IPA symbol set",
         JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, symbolSetOptions, symbolSetOptions[0]);        // this.mode.showOptionDialog(null, "Please choose desired mode:",
-
-        this.frame = new JFrame("IPA Flashcard");
+        
+        this.frame = new JFrame();
+        // set frame title according to mode and symbol set
+        if(mode == 0){ // IPA to description
+            if(symbolSet == 0) frame.setTitle("IPA Flashcard: Vowel to description");
+            else if(symbolSet == 1) frame.setTitle("IPA Flashcard: Pulmonic consonant to description");
+            else if(symbolSet == 2) frame.setTitle("IPA Flashcard: Vowel or consonant to description");
+        }
+        else if(mode == 1){ // description to IPA
+            if(symbolSet == 0) frame.setTitle("IPA Flashcard: Description to vowel");            
+            else if(symbolSet == 1)frame.setTitle("IPA Flashcard: Description to pulmonic consonant");
+            else if(symbolSet == 2)frame.setTitle("IPA Flashcard: Description to vowel or consonant");
+        }
+        this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.frame.setSize(800, 600);
         // this.flashcard = new JPanel();
         // this.options = new JPanel();
         this.menuBar = new JMenuBar();
@@ -40,14 +58,34 @@ public class GUI {
         this.menu.add(quit);
         this.menuBar.add(menu);
         this.frame.setJMenuBar(menuBar);
+
+// use gridbaglayout for the panels in the frame
+        this.frame.setLayout(new GridBagLayout());
+        this.flashcardPanel = new FlashcardPanel();
+        this.optionPanel = new OptionPanel();
+
+        // create buttonPanel and create+add confirm, cancel, and skip buttons
+        this.buttonPanel = new JPanel();
+        this.buttonPanel.setLayout(new GridLayout(1, 3));
+        confirmButton = new JButton("Confirm");
+        cancelButton = new JButton("Cancel");
+        skipButton = new JButton("Skip");
+        this.buttonPanel.add(confirmButton);
+        this.buttonPanel.add(cancelButton);
+        this.buttonPanel.add(skipButton);
+        // this.frame.add(flashcardPanel);
+        // this.frame.add(optionPanel);
+        // this.frame.add(buttonPanel);
+
+        this.frame.setVisible(true);
     }
     
     
     
     public class FlashcardPanel extends JPanel{
         public FlashcardPanel(){
-            JLabel label = new JLabel("IPA Flashcard");
-            this.add(label);
+            flashcardPanel = new JPanel();
+            flashcardPanel.setLayout(new BorderLayout());
             if(mode == 0){
                 // show IPA symbol
                 if(symbolSet == 0){
@@ -61,6 +99,7 @@ public class GUI {
                 }
             }
             else if(mode == 1){
+
                 // show description
                 if(symbolSet == 0){
                     // show vowel description
@@ -77,8 +116,8 @@ public class GUI {
         // paint component method
     }
     
-    public class OptionsPanel extends JPanel{
-        public OptionsPanel(){
+    public class OptionPanel extends JPanel{
+        public OptionPanel(){
             if(mode == 0){
                 // show description
                 if(symbolSet == 0){

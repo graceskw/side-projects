@@ -1,0 +1,11 @@
+ipa->description only, for now
+vowels only, for now
+1. build gui
+2. light/dark mode
+3. flashcard mechanism
+    if right, show green tick
+    if wrong, show red cross and correct answer, put back in queue randomly
+4. options panel
+    - build gui
+        add options as dropdown list
+5. make buttons panel work with options

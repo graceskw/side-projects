@@ -9,3 +9,14 @@ vowels only, for now
     - build gui
         add options as dropdown list
 5. make buttons panel work with options
+
+
+
+
+
+
+
+
+ideas:
+- add a "show answer" button
+- add counter 

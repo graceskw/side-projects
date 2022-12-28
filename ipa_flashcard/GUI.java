@@ -46,10 +46,11 @@ public class GUI {
             else if(symbolSet == 1)frame.setTitle("IPA Flashcard: Description to pulmonic consonant");
             else if(symbolSet == 2)frame.setTitle("IPA Flashcard: Description to vowel or consonant");
         }
+        
         this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.frame.setSize(800, 600);
-        // this.flashcard = new JPanel();
-        // this.options = new JPanel();
+
+        // create menu
         this.menuBar = new JMenuBar();
         this.menu = new JMenu("Menu");
         this.restart = new JMenuItem("Restart progress");
@@ -61,9 +62,21 @@ public class GUI {
 
 // use gridbaglayout for the panels in the frame
         this.frame.setLayout(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
         this.flashcardPanel = new FlashcardPanel();
-        this.optionPanel = new OptionPanel();
+            c.gridx = 0;
+            c.gridy = 0;
+            c.gridwidth = 1;
+            c.gridheight = 5;
+        this.frame.add(flashcardPanel);
 
+        this.optionPanel = new OptionPanel();
+            c.gridx = 0;
+            c.gridy = 5;
+            c.gridwidth = 1;
+            c.gridheight = 3;
+        this.frame.add(optionPanel);
+        
         // create buttonPanel and create+add confirm, cancel, and skip buttons
         this.buttonPanel = new JPanel();
         this.buttonPanel.setLayout(new GridLayout(1, 3));
@@ -73,9 +86,13 @@ public class GUI {
         this.buttonPanel.add(confirmButton);
         this.buttonPanel.add(cancelButton);
         this.buttonPanel.add(skipButton);
-        // this.frame.add(flashcardPanel);
-        // this.frame.add(optionPanel);
-        // this.frame.add(buttonPanel);
+            c.gridx = 0;
+            c.gridy = 8;
+            c.gridwidth = 1;
+            c.gridheight = 2;
+        this.frame.add(buttonPanel);
+        
+        
 
         this.frame.setVisible(true);
     }
@@ -93,22 +110,26 @@ public class GUI {
                 }
                 else if(symbolSet == 1){
                     // show consonant symbol
+                    // to be implemented
                 }
                 else if(symbolSet == 2){
                     // show vowel and consonant symbol
+                    // to be implemented
                 }
             }
             else if(mode == 1){
-
                 // show description
                 if(symbolSet == 0){
                     // show vowel description
+                    // to be implemented
                 }
                 else if(symbolSet == 1){
                     // show consonant description
+                    // to be implemented
                 }
                 else if(symbolSet == 2){
                     // show vowel and consonant description
+                    // to be implemented
                 }
             }
         }
@@ -122,24 +143,45 @@ public class GUI {
                 // show description
                 if(symbolSet == 0){
                     // show vowel description
+                    setLayout(new GridLayout(1, 5));
+                    String[] s1 = {"pulmonic", "non-pulmonic"};
+                    JComboBox<String> airflow = new JComboBox<>(s1);
+                    String[] s2 = {"bilabial", "labiodental", "dental", "alveolar", "post-alveolar", "retroflex", "palatal", "velar", "uvular", "pharyngeal", "glottal"};
+                    JComboBox<String> place = new JComboBox<>(s2);
+                    String[] s3 = {"central", "lateral"};
+                    JComboBox<String> centrality = new JComboBox<>(s3);
+                    String[] s4 = {"oral", "nasal"};
+                    JComboBox<String> oral = new JComboBox<>(s4);
+                    String[] s5 = {"stop", "trill", "tap/flap", "fricative", "affricate", "approximant"};
+                    JComboBox<String> manner = new JComboBox<>(s5);
+                    add(airflow);
+                    add(place);
+                    add(centrality);
+                    add(oral);
+                    add(manner);
                 }
                 else if(symbolSet == 1){
                     // show consonant description
+                    // to be implemented
                 }
                 else if(symbolSet == 2){
                     // show vowel and consonant description
+                    // to be implemented
                 }
             }
             else if(mode == 1){
                 // show IPA symbol
                 if(symbolSet == 0){
                     // show vowel symbol
+                    // to be implemented
                 }
                 else if(symbolSet == 1){
                     // show consonant symbol
+                    // to be implemented
                 }
                 else if(symbolSet == 2){
                     // show vowel and consonant symbol
+                    // to be implemented
                 }
             }
 

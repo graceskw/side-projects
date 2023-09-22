@@ -33,15 +33,23 @@ wordList = [simList[x][0] for x in range(len(simList))]
 
 # start guessing
 guess = input("請輸入字詞: ")
+guessList = []
+guessed = set()
 while(guess != answer):
     # if guess not in word2vec, print error message
     if(guess not in wv.key_to_index):
         print("搵唔到呢個字/詞語 :(")
+    elif guess in guessed:
+        print("你已經估過呢個字/詞語啦")
     else:
         # get similarity ranking of guess in relation to answer
         ranking = wordList.index(guess)
         print(f"你估咗: {guess}, 佢同答案嘅相似度爭{ranking}名")
-    
+        guessList.append([guess, ranking])
+        guessList.sort(key=lambda l:l[1])
+        guessed.add(guess)
+
+    print(guessList)
     guess = input("請輸入字詞: ")
 
 print(f"恭喜晒, 你估中咗啦! 個答案係: {answer}")print(f"你估咗{guessCount+1}次先估得中")

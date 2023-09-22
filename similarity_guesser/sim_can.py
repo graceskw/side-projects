@@ -3,7 +3,7 @@ import pandas as pd
 import random
 
 # get word2vec for Cantontese words
-wv = KeyedVectors.load_word2vec_format("../toastynews.vec", binary=False)
+wv = KeyedVectors.load_word2vec_format("./toastynews.vec", binary=False)
 
 # get frequency list of Cantonese words
 pdFreq = pd.read_csv('Most Common Cantonese Words (Frequency List)_over 10.csv')
@@ -13,6 +13,8 @@ freqList = pdFreq['Word'].tolist()
 answer = random.choice(freqList)
 while(answer not in wv.key_to_index):
     answer = random.choice(freqList)
+# save answer of each question to file
+open("answer.txt", "a+", encoding="utf-8").write(answer+"\n")
 
 # for debug
 print(answer)
@@ -42,4 +44,4 @@ while(guess != answer):
     
     guess = input("請輸入字詞: ")
 
-print(f"恭喜晒, 你估中咗啦! 個答案係: {answer}")
+print(f"恭喜晒, 你估中咗啦! 個答案係: {answer}")print(f"你估咗{guessCount+1}次先估得中")
